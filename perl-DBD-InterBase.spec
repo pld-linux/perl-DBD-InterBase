@@ -9,12 +9,12 @@ Summary:	DBD::InterBase perl module
 Summary(pl):	Modu³ perla DBD::InterBase
 Name:		perl-DBD-InterBase
 Version:	0.40
-Release:	0.1
+Release:	0.2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-DBI >= 1.08
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 #BR: InterBase libraries
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
