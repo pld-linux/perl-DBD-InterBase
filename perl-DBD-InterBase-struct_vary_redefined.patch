@@ -1,0 +1,29 @@
+--- dbdimp.h~	2003-03-05 19:13:52.000000000 +0100
++++ dbdimp.h	2004-08-13 18:56:38.572529112 +0200
+@@ -239,10 +239,10 @@
+ };
+ 
+ 
+-typedef struct vary
++typedef struct vvary
+ {
+-    short vary_length;
+-    char  vary_string [1];
++    short vvary_length;
++    char  vvary_string [1];
+ } VARY;
+ 
+ 
+--- dbdimp.c~	2002-09-10 15:30:07.000000000 +0200
++++ dbdimp.c	2004-08-13 18:57:14.798022000 +0200
+@@ -1396,8 +1396,8 @@
+ 
+                 case SQL_VARYING:
+                 {
+-                    VARY *vary = (VARY *) var->sqldata;
+-                    sv_setpvn(sv, vary->vary_string, vary->vary_length);
++                    VARY *vvary = (VARY *) var->sqldata;
++                    sv_setpvn(sv, vvary->vvary_string, vvary->vvary_length);
+                     /* Note that sqllen for VARCHARs is the max length */
+                     break;
+                 }
