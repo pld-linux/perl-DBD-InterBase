@@ -56,4 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/DBD/InterBase
 %{perl_vendorarch}/auto/DBD/InterBase/InterBase.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/InterBase/InterBase.so
-%{_mandir}/man3/*
+%{_mandir}/man3/DBD*
