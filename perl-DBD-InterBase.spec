@@ -1,11 +1,15 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
 %define	pnam	InterBase
 Summary:	DBD::InterBase perl module
 Summary(pl):	Modu³ perla DBD::InterBase
 Name:		perl-DBD-InterBase
-Version:	0.30
-Release:	0.2
+Version:	0.40
+Release:	0.1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -25,8 +29,9 @@ DBD::InterBase - sterownik DBI do serwera baz danych InterBase.
 
 %build
 perl Makefile.PL
-
 %{__make} OPTIMIZE="%{rpmcflags}"
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
