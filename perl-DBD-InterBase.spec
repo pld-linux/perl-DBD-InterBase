@@ -13,6 +13,7 @@ Release:	1.1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	18926bed17a4d9c8f91c1460aceb1394
 BuildRequires:	perl-DBI >= 1.08
 BuildRequires:	rpm-perlprov >= 4.1-13
 #BR: InterBase libraries
