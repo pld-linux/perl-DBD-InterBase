@@ -13,7 +13,7 @@ Release:	0.5
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	dde9cfd991cd73eae925c82a42405e07
+# Source0-md5:	70d0142378ab928d9a75e465426d2437
 Patch0:		%{name}-libsonly.patch
 BuildRequires:	Firebird-devel
 BuildRequires:	perl-DBI >= 1.08
