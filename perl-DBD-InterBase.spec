@@ -4,8 +4,8 @@
 Summary:	DBD::InterBase perl module
 Summary(pl):	Modu³ perla DBD::InterBase
 Name:		perl-DBD-InterBase
-Version:	0.28.4
-Release:	1
+Version:	0.30
+Release:	0.1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
