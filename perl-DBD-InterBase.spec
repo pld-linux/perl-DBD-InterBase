@@ -9,12 +9,13 @@ Summary:	DBD::InterBase - DBI driver for Firebird and InterBase RDBMS server
 Summary(pl):	DBD::InterBase - sterownik DBI dla serwerów RDBMS Firebird i InterBase
 Name:		perl-DBD-InterBase
 Version:	0.41
-Release:	1
+Release:	2
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	dde9cfd991cd73eae925c82a42405e07
 Patch0:		%{name}-libsonly.patch
+Patch1:		%{name}-struct_vary_redefined.patch
 BuildRequires:	Firebird-devel
 BuildRequires:	perl-DBI >= 1.08
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -31,7 +32,8 @@ umo¿liwiaj±cym dostêp do baz danych Firebird i InterBase.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%{!?with_tests:%patch -p1}
+%{!?with_tests:%patch0 -p1}
+%patch1 -p0
 
 %build
 %{__perl} Makefile.PL %{!?with_tests:</dev/null} \
