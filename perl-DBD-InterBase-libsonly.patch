@@ -1,15 +1,16 @@
---- DBD-InterBase-0.41/Makefile.PL.orig	2003-05-20 12:44:30.000000000 +0200
-+++ DBD-InterBase-0.41/Makefile.PL	2003-10-31 23:44:19.829509104 +0100
-@@ -263,22 +263,6 @@
+diff -Naur DBD-InterBase-0.43.ori/Makefile.PL DBD-InterBase-0.43.mod/Makefile.PL
+--- DBD-InterBase-0.43.ori/Makefile.PL	2004-02-24 08:49:01.000000000 +0100
++++ DBD-InterBase-0.43.mod/Makefile.PL	2004-12-08 19:10:46.309183328 +0100
+@@ -302,22 +302,6 @@
  # See lib/ExtUtils/MakeMaker.pm for details of how to influence
  # the contents of the Makefile that is written.
  
 -# prompt for InterBase bin directory
--$IB_Bin_path = dir_choice("InterBase bin directory", [@ib_bin_dirs], [qw(gfix gfix.exe)]);
+-$IB_Bin_path = dir_choice("InterBase/Firebird bin directory", [@ib_bin_dirs], [qw(gfix gfix.exe)]);
 -
 -unless(-x $IB_Bin_path)
 -{
--    carp "I cannot find your InterBase installation.\nDBD::InterBase cannot build or run without InterBase.\n";
+-    carp "I cannot find your InterBase/Firebird installation.\nDBD::InterBase cannot build or run without InterBase.\n";
 -    exit 1;
 -}
 -
@@ -21,9 +22,9 @@
 -my $is_final = $IBVERSION =~ /\.6\d+$/ ? 1 : 0;
 -
  # prompt for IB include dir
- my $ib_inc = dir_choice("InterBase include directory", [@ib_inc_dirs], [qw(gds.h ibase.h)]);
+ my $ib_inc = dir_choice("InterBase/Firebird include directory", [@ib_inc_dirs], [qw(gds.h ibase.h)]);
  
-@@ -472,9 +456,6 @@
+@@ -536,9 +520,6 @@
      exit 1;
  }
  
