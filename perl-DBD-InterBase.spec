@@ -44,5 +44,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-#%{perl_sitearch}/???
+#%%{perl_sitearch}/???
 %{_mandir}/man3/*
