@@ -5,8 +5,8 @@ Summary:	DBD::InterBase perl module
 Summary(pl):	Modu³ perla DBD::InterBase
 Name:		perl-DBD-InterBase
 Version:	0.30
-Release:	0.1
-License:	GPL or Artistic
+Release:	0.2
+License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-DBI >= 1.08
@@ -33,13 +33,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf Changes README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README
 #%{perl_sitearch}/???
 %{_mandir}/man3/*
