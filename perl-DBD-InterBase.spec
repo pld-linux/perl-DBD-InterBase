@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test" (requires database and interaction)
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	DBD
-%define	pnam	InterBase
+%define		pdir	DBD
+%define		pnam	InterBase
 Summary:	DBD::InterBase - DBI driver for Firebird and InterBase RDBMS server
 Summary(pl):	DBD::InterBase - sterownik DBI dla serwerów RDBMS Firebird i InterBase
 Name:		perl-DBD-InterBase
