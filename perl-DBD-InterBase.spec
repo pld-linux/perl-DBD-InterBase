@@ -37,6 +37,7 @@ umożliwiającym dostęp do baz danych Firebird i InterBase.
 %{__perl} Makefile.PL %{!?with_tests:</dev/null} \
 	INSTALLDIRS=vendor
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
