@@ -8,13 +8,14 @@
 Summary:	DBD::InterBase - DBI driver for Firebird and InterBase RDBMS server
 Summary(pl.UTF-8):	DBD::InterBase - sterownik DBI dla serwerów RDBMS Firebird i InterBase
 Name:		perl-DBD-InterBase
-Version:	0.47
+Version:	0.48
 Release:	0.1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	24bc3097562a51ca412f64e553189a83
+Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	2131da51fec3ed9aa7c4cc3af8c10098
 Patch0:		%{name}-libsonly.patch
+URL:		http://search.cpan.org/dist/DBD-InterBase/
 BuildRequires:	Firebird-devel
 BuildRequires:	perl-DBI >= 1.08
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -57,7 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/DBD/InterBase.pm
 %dir %{perl_vendorarch}/DBD/InterBase
 %{perl_vendorarch}/DBD/InterBase/GetInfo.pm
+%{perl_vendorarch}/DBD/InterBase/TypeInfo.pm
 %dir %{perl_vendorarch}/auto/DBD/InterBase
 %{perl_vendorarch}/auto/DBD/InterBase/InterBase.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/InterBase/InterBase.so
-%{_mandir}/man3/DBD*
+%{_mandir}/man3/DBD::InterBase.3pm*
