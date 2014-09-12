@@ -60,6 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/DBD/InterBase/GetInfo.pm
 %{perl_vendorarch}/DBD/InterBase/TypeInfo.pm
 %dir %{perl_vendorarch}/auto/DBD/InterBase
-%{perl_vendorarch}/auto/DBD/InterBase/InterBase.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/InterBase/InterBase.so
 %{_mandir}/man3/DBD::InterBase.3pm*
