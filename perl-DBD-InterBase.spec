@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (requires database and interaction)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	DBD
 %define		pnam	InterBase
 Summary:	DBD::InterBase - DBI driver for Firebird and InterBase RDBMS server
